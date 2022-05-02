@@ -1,0 +1,144 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: network-monitor
+# Configurations: Release
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Release
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/nikita/dev/network-monitor/build/
+# =============================================================================
+# Object build statements for EXECUTABLE target network-monitor
+
+
+#############################################
+# Order-only phony target for network-monitor
+
+build cmake_object_order_depends_target_network-monitor: phony || CMakeFiles/network-monitor.dir
+
+build CMakeFiles/network-monitor.dir/src/main.cpp.o: CXX_COMPILER__network-monitor_Release /Users/nikita/dev/network-monitor/src/main.cpp || cmake_object_order_depends_target_network-monitor
+  DEFINES = -DBOOST_STACKTRACE_ADDR2LINE_LOCATION=\"/usr/bin/addr2line\" -DBOOST_STACKTRACE_GNU_SOURCE_NOT_REQUIRED -DBOOST_STACKTRACE_USE_ADDR2LINE -DBOOST_STACKTRACE_USE_BACKTRACE -DBOOST_STACKTRACE_USE_NOOP
+  DEP_FILE = CMakeFiles/network-monitor.dir/src/main.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -std=gnu++11
+  INCLUDES = -isystem /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/include -isystem /Users/nikita/.conan/data/bzip2/1.0.8/_/_/package/5eea6cd0d4094bfb10578864f66812e7c6a4d0e6/include -isystem /Users/nikita/.conan/data/zlib/1.2.12/_/_/package/e4fbacdee83eb1a2e68227ffe19f6e9a61b36cbc/include -isystem /Users/nikita/.conan/data/libiconv/1.16/_/_/package/e4fbacdee83eb1a2e68227ffe19f6e9a61b36cbc/include -isystem /Users/nikita/.conan/data/libbacktrace/cci.20210118/_/_/package/e4fbacdee83eb1a2e68227ffe19f6e9a61b36cbc/include
+  OBJECT_DIR = CMakeFiles/network-monitor.dir
+  OBJECT_FILE_DIR = CMakeFiles/network-monitor.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target network-monitor
+
+
+#############################################
+# Link the executable network-monitor
+
+build network-monitor: CXX_EXECUTABLE_LINKER__network-monitor_Release CMakeFiles/network-monitor.dir/src/main.cpp.o | /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_contract.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_coroutine.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_fiber_numa.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_fiber.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_context.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_graph.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_iostreams.a /Users/nikita/.conan/data/bzip2/1.0.8/_/_/package/5eea6cd0d4094bfb10578864f66812e7c6a4d0e6/lib/libbz2.a /Users/nikita/.conan/data/zlib/1.2.12/_/_/package/e4fbacdee83eb1a2e68227ffe19f6e9a61b36cbc/lib/libz.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_json.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_locale.a /Users/nikita/.conan/data/libiconv/1.16/_/_/package/e4fbacdee83eb1a2e68227ffe19f6e9a61b36cbc/lib/libiconv.a /Users/nikita/.conan/data/libiconv/1.16/_/_/package/e4fbacdee83eb1a2e68227ffe19f6e9a61b36cbc/lib/libcharset.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_log_setup.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_log.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_math_c99.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_math_c99f.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_math_c99l.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_math_tr1.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_math_tr1f.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_math_tr1l.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_nowide.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_program_options.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_random.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_regex.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_stacktrace_addr2line.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_stacktrace_backtrace.a /Users/nikita/.conan/data/libbacktrace/cci.20210118/_/_/package/e4fbacdee83eb1a2e68227ffe19f6e9a61b36cbc/lib/libbacktrace.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_stacktrace_basic.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_stacktrace_noop.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_timer.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_type_erasure.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_thread.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_chrono.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_container.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_date_time.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_unit_test_framework.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_prg_exec_monitor.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_test_exec_monitor.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_exception.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_wave.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_filesystem.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_atomic.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_wserialization.a /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_serialization.a
+  FLAGS = -O3 -DNDEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
+  LINK_LIBRARIES = -Wl,-rpath,/Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_contract.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_coroutine.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_fiber_numa.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_fiber.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_context.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_graph.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_iostreams.a  /Users/nikita/.conan/data/bzip2/1.0.8/_/_/package/5eea6cd0d4094bfb10578864f66812e7c6a4d0e6/lib/libbz2.a  /Users/nikita/.conan/data/zlib/1.2.12/_/_/package/e4fbacdee83eb1a2e68227ffe19f6e9a61b36cbc/lib/libz.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_json.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_locale.a  /Users/nikita/.conan/data/libiconv/1.16/_/_/package/e4fbacdee83eb1a2e68227ffe19f6e9a61b36cbc/lib/libiconv.a  /Users/nikita/.conan/data/libiconv/1.16/_/_/package/e4fbacdee83eb1a2e68227ffe19f6e9a61b36cbc/lib/libcharset.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_log_setup.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_log.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_math_c99.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_math_c99f.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_math_c99l.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_math_tr1.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_math_tr1f.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_math_tr1l.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_nowide.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_program_options.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_random.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_regex.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_stacktrace_addr2line.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_stacktrace_backtrace.a  /Users/nikita/.conan/data/libbacktrace/cci.20210118/_/_/package/e4fbacdee83eb1a2e68227ffe19f6e9a61b36cbc/lib/libbacktrace.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_stacktrace_basic.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_stacktrace_noop.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_timer.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_type_erasure.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_thread.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_chrono.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_container.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_date_time.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_unit_test_framework.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_prg_exec_monitor.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_test_exec_monitor.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_exception.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_wave.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_filesystem.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_atomic.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_wserialization.a  /Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib/libboost_serialization.a
+  LINK_PATH = -L/Users/nikita/.conan/data/boost/1.78.0/_/_/package/8c16057f777658e8b342a73eb3cc596f63aa47ae/lib
+  OBJECT_DIR = CMakeFiles/network-monitor.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = network-monitor
+  TARGET_PDB = network-monitor.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/nikita/dev/network-monitor/build && /usr/local/Cellar/cmake/3.23.1/bin/ccmake -S/Users/nikita/dev/network-monitor -B/Users/nikita/dev/network-monitor/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/nikita/dev/network-monitor/build && /usr/local/Cellar/cmake/3.23.1/bin/cmake --regenerate-during-build -S/Users/nikita/dev/network-monitor -B/Users/nikita/dev/network-monitor/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/nikita/dev/network-monitor/build
+
+build all: phony network-monitor
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Users/nikita/.conan/data/bzip2/1.0.8/_/_/package/5eea6cd0d4094bfb10578864f66812e7c6a4d0e6/lib/cmake/conan-official-bzip2-variables.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCInformation.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCXXInformation.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeFindDependencyMacro.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/AppleClang-C.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Clang.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/GNU.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/FindPackageMessage.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-Clang-C.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-Clang.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Darwin-Initialize.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Darwin.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.1/CMakeCCompiler.cmake CMakeFiles/3.23.1/CMakeCXXCompiler.cmake CMakeFiles/3.23.1/CMakeSystem.cmake FindBZip2.cmake FindBoost.cmake FindIconv.cmake FindZLIB.cmake Findlibbacktrace.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt /Users/nikita/.conan/data/bzip2/1.0.8/_/_/package/5eea6cd0d4094bfb10578864f66812e7c6a4d0e6/lib/cmake/conan-official-bzip2-variables.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCInformation.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCXXInformation.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeFindDependencyMacro.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/AppleClang-C.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/Clang.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Compiler/GNU.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/FindPackageMessage.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-Clang-C.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Apple-Clang.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Darwin-Initialize.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/Darwin.cmake /usr/local/Cellar/cmake/3.23.1/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.1/CMakeCCompiler.cmake CMakeFiles/3.23.1/CMakeCXXCompiler.cmake CMakeFiles/3.23.1/CMakeSystem.cmake FindBZip2.cmake FindBoost.cmake FindIconv.cmake FindZLIB.cmake Findlibbacktrace.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
